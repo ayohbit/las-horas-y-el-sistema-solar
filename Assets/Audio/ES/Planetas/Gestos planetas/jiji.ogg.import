@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jiji.ogg-0a31583660c0cef4513c98f559eba744.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/ES/Planetas/Gestos planetas/jiji.ogg"
+dest_files=[ "res://.import/jiji.ogg-0a31583660c0cef4513c98f559eba744.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

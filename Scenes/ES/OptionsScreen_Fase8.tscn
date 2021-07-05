@@ -1,0 +1,267 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Assets/Fonts/Firenight-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Option_scene/idioma.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Option_scene/logo-instagram.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Option_scene/simbolo-.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Option_scene/ingles.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Option_scene/opciones.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Option_scene/simbolo+.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UI/Botones/flecha-derecha.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Option_scene/facebook.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Option_scene/selector-volumen.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Option_scene/espanhaols.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Fondos/Fondo-fases-general.jpg" type="Texture" id=14]
+[ext_resource path="res://Assets/Option_scene/brasileiro.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Option_scene/volumen.png" type="Texture" id=16]
+[ext_resource path="res://Buttons/menu_button.tscn" type="PackedScene" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 200
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 120
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 120
+font_data = ExtResource( 1 )
+
+[node name="Fase 1" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_lock_": true
+}
+
+[node name="Botones" type="Node2D" parent="."]
+position = Vector2( 2392, 1160 )
+
+[node name="ES" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -1453.7
+margin_top = -723.121
+margin_right = -1235.7
+margin_bottom = -522.121
+icon = ExtResource( 13 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/MainTittleScreen.tscn"
+
+[node name="PT" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -1111.43
+margin_top = -723.121
+margin_right = -893.434
+margin_bottom = -522.121
+icon = ExtResource( 15 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/MainTittleScreen.tscn"
+
+[node name="EN" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -776.19
+margin_top = -723.121
+margin_right = -558.19
+margin_bottom = -522.121
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/MainTittleScreen.tscn"
+
+[node name="otros cuentos" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -2030.72
+margin_top = -257.861
+margin_right = -1173.72
+margin_bottom = -56.861
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 1, 0.607843, 0, 1 )
+custom_colors/font_color = Color( 1, 0.447059, 0, 1 )
+text = "otros cuentos"
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/Otros-cuentos-main.tscn"
+
+[node name="nosotros" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -1075.89
+margin_top = -246.97
+margin_right = -218.888
+margin_bottom = -45.9701
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 1, 0.607843, 0, 1 )
+custom_colors/font_color = Color( 1, 0.447059, 0, 1 )
+text = "creditos"
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/Creditos.tscn"
+
+[node name="salir" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -1511.18
+margin_top = -9.76196
+margin_right = -654.179
+margin_bottom = 191.238
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 1, 0.607843, 0, 1 )
+custom_colors/font_color = Color( 1, 0.447059, 0, 1 )
+text = "salir del juego"
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 983.036
+margin_top = 107.784
+margin_right = 1697.04
+margin_bottom = 348.784
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.447059, 0, 1 )
+text = "Opciones"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="volumen2" type="Sprite" parent="."]
+position = Vector2( 318.648, 787.417 )
+scale = Vector2( 0.887605, 0.887605 )
+texture = ExtResource( 16 )
+
+[node name="idioma" type="Label" parent="."]
+margin_left = 482.176
+margin_top = 490.606
+margin_right = 841.176
+margin_bottom = 671.606
+rect_pivot_offset = Vector2( 179.5, 90.5 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0.447059, 0, 1 )
+text = "idioma"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="idioma" type="Sprite" parent="idioma"]
+position = Vector2( -172.531, 90.3994 )
+scale = Vector2( 0.251457, 0.251457 )
+texture = ExtResource( 2 )
+
+[node name="instagram" type="Sprite" parent="idioma/idioma"]
+position = Vector2( 8211.17, -1641.94 )
+scale = Vector2( 4.35048, 4.35046 )
+texture = ExtResource( 3 )
+
+[node name="facebook" type="Sprite" parent="idioma/idioma"]
+position = Vector2( 9077.16, -1650.55 )
+scale = Vector2( 1.32109, 1.32109 )
+texture = ExtResource( 10 )
+
+[node name="idioma2" type="Label" parent="."]
+margin_left = 1874.03
+margin_top = 472.647
+margin_right = 2545.03
+margin_bottom = 653.647
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 179.5, 90.5 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0.447059, 0, 1 )
+text = "(Proximamente)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="idioma" type="Sprite" parent="idioma2"]
+visible = false
+position = Vector2( -172.531, 90.3994 )
+scale = Vector2( 0.251457, 0.251457 )
+texture = ExtResource( 2 )
+
+[node name="instagram" type="Sprite" parent="idioma2/idioma"]
+visible = false
+position = Vector2( 8211.17, -1641.94 )
+scale = Vector2( 4.35048, 4.35046 )
+texture = ExtResource( 3 )
+
+[node name="facebook" type="Sprite" parent="idioma2/idioma"]
+visible = false
+position = Vector2( 9077.16, -1650.55 )
+scale = Vector2( 1.32109, 1.32109 )
+texture = ExtResource( 10 )
+
+[node name="volumen" type="Label" parent="."]
+margin_left = 461.945
+margin_top = 716.52
+margin_right = 965.945
+margin_bottom = 897.52
+rect_pivot_offset = Vector2( 273.751, 105.378 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 0.447059, 0, 1 )
+text = "Volumen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="simbolo+" type="Sprite" parent="."]
+position = Vector2( 2009.24, 788.341 )
+texture = ExtResource( 7 )
+
+[node name="simbolo-" type="Sprite" parent="."]
+position = Vector2( 989.834, 790.166 )
+scale = Vector2( 1.51311, 1 )
+texture = ExtResource( 4 )
+
+[node name="Fondo-fases-general" type="Sprite" parent="."]
+position = Vector2( 1388, 720 )
+z_index = -1
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 1083.0
+margin_top = 679.0
+margin_right = 1901.0
+margin_bottom = 882.0
+custom_icons/grabber_disabled = ExtResource( 12 )
+custom_icons/grabber_highlight = ExtResource( 12 )
+custom_icons/grabber = ExtResource( 12 )
+min_value = -30.0
+max_value = 15.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 9
+
+[node name="Botones2" type="Node2D" parent="."]
+position = Vector2( 2400, 1176 )
+
+[node name="RightButton" parent="Botones2" instance=ExtResource( 17 )]
+visible = false
+margin_right = 316.0
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+reference_path = "res://Fase3.tscn"
+
+[node name="LeftButton" parent="Botones2" instance=ExtResource( 17 )]
+visible = false
+margin_left = -2024.0
+margin_top = 200.0
+margin_right = -1708.0
+margin_bottom = 401.0
+rect_rotation = 180.228
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+reference_path = "res://Fase1.tscn"
+
+[node name="Button" parent="Botones2" instance=ExtResource( 17 )]
+margin_left = -2331.0
+margin_top = -1104.0
+margin_right = -2113.0
+margin_bottom = -903.0
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/Fase8.tscn"

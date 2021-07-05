@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Buttons/menu_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/UI/Botones/flecha-derecha.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/Botones/menu_icono_1.png" type="Texture" id=4]
+
+[node name="Botones" type="Node2D"]
+position = Vector2( 2400, 1176 )
+
+[node name="RightButton" parent="." instance=ExtResource( 1 )]
+margin_right = 316.0
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+reference_path = "res://Fase3.tscn"
+
+[node name="LeftButton" parent="." instance=ExtResource( 1 )]
+margin_left = -2024.0
+margin_top = 200.0
+margin_right = -1708.0
+margin_bottom = 401.0
+rect_rotation = 180.228
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+reference_path = "res://Fase1.tscn"
+
+[node name="Button" parent="." instance=ExtResource( 1 )]
+margin_left = 72.0
+margin_top = -1104.0
+margin_right = 290.0
+margin_bottom = -903.0
+icon = ExtResource( 4 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/MainTittleScreen.tscn"

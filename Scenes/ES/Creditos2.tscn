@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Fonts/Firenight-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/cwb/logo-CWB-game-studio.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/Botones/flecha-derecha.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Option_scene/opciones.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Fondos/Fondo-fases-general.jpg" type="Texture" id=14]
+[ext_resource path="res://Buttons/menu_button.tscn" type="PackedScene" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 75
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 150
+font_data = ExtResource( 1 )
+
+[node name="Fase 1" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_lock_": true
+}
+
+[node name="Botones" type="Node2D" parent="."]
+position = Vector2( 2392, 1160 )
+
+[node name="menu" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -2331.3
+margin_top = -1104.0
+margin_right = -2113.3
+margin_bottom = -903.0
+icon = ExtResource( 9 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/OptionsScreen.tscn"
+
+[node name="creditos2" type="Label" parent="."]
+margin_left = 352.973
+margin_top = 430.452
+margin_right = 2522.97
+margin_bottom = 1367.45
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0.447059, 0, 1 )
+text = "DiseNo y animaciOn: Eva Aro
+ProgramaciOn: Lucas Araujo
+
+BAsado en el cuento: \"Las horas y el Sistema Solar\"
+Escrito por: Susana Armengol 
+Ilustrado por: Olivia G Hardy
+Sonido FX  y voz en espanol: Eva Aro
+Traducción y voz en ingles: Elena Louro
+Voces en Portugues: kamila pereira
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Botones2" type="Node2D" parent="."]
+position = Vector2( 2400, 1176 )
+
+[node name="RightButton" parent="Botones2" instance=ExtResource( 17 )]
+margin_left = -1204.37
+margin_top = -1028.13
+margin_right = -695.366
+margin_bottom = -827.132
+custom_fonts/font = SubResource( 2 )
+text = "creditos"
+flat = true
+expand_icon = true
+reference_path = "res://Fase3.tscn"
+
+[node name="Fondo-fases-general" type="Sprite" parent="."]
+position = Vector2( 1385.46, 716.219 )
+scale = Vector2( 1.02, 1.02 )
+z_index = -1
+texture = ExtResource( 14 )
+
+[node name="logo-CWB-game-studio" type="Sprite" parent="."]
+position = Vector2( 2422.89, 224.194 )
+scale = Vector2( 0.455219, 0.455219 )
+texture = ExtResource( 2 )
+
+[node name="Botones3" type="Node2D" parent="."]
+position = Vector2( 2400, 1176 )
+
+[node name="RightButton" parent="Botones3" instance=ExtResource( 17 )]
+margin_right = 316.0
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/agradecimientos.tscn"
+
+[node name="LeftButton" parent="Botones3" instance=ExtResource( 17 )]
+margin_left = -2024.0
+margin_top = 200.0
+margin_right = -1708.0
+margin_bottom = 401.0
+rect_rotation = 180.228
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/Creditos.tscn"

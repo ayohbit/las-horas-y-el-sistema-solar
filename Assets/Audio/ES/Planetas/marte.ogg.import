@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/marte.ogg-4efdcc106faf2cb21b117d46dd9e99d0.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/ES/Planetas/marte.ogg"
+dest_files=[ "res://.import/marte.ogg-4efdcc106faf2cb21b117d46dd9e99d0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

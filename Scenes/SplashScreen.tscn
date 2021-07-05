@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/SplashScreen.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/LogoMarama.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fondos/Fondo-marama.jpg" type="Texture" id=3]
+[ext_resource path="res://Assets/cwb/logo-CWB-game-studio.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "DoSplash"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("LogoMarama:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1388, -0.25, 0, 0.25, 0, 1388, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 2.7, 3.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("LogoMarama:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -150, -0.25, 0, 0.378188, 807.056, 720, -0.59775, 417.755, 0.288291, -247.829 ),
+"times": PoolRealArray( 2.7, 3.5 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LogoMarama:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.7, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1.86607, 0.535887 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("fondo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.1, 2.7 ),
+"transitions": PoolRealArray( 1.6245, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("logo:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1, 2.1, 2.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("logo:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 0.615572, 3.24901 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1.1, 1.1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=2]
+
+[node name="SplashScreen" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -320.778 ]
+}
+
+[node name="LogoMarama" type="Sprite" parent="."]
+position = Vector2( 1388, -150 )
+scale = Vector2( 1.27432, 1.27432 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "DoSplash"
+anims/DoSplash = SubResource( 1 )
+
+[node name="fondo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 3.99808e-11 )
+material = SubResource( 2 )
+position = Vector2( 1390, 719 )
+scale = Vector2( 1.01, 1.01 )
+z_index = -2
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="logo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1364, 684 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]

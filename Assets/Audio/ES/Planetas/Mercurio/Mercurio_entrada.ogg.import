@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mercurio_entrada.ogg-229dab54cb5ed2b707520d24c9e00553.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/ES/Planetas/Mercurio/Mercurio_entrada.ogg"
+dest_files=[ "res://.import/Mercurio_entrada.ogg-229dab54cb5ed2b707520d24c9e00553.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

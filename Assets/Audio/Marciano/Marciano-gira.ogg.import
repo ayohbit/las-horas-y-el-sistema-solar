@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Marciano-gira.ogg-0bafcea54392e224b4df218d071736a8.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Marciano/Marciano-gira.ogg"
+dest_files=[ "res://.import/Marciano-gira.ogg-0bafcea54392e224b4df218d071736a8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

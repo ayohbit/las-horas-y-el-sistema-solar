@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fase-4-giro.ogg-9cd72343e2474ad287d666f8e8e21fe7.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/fase-4-giro.ogg"
+dest_files=[ "res://.import/fase-4-giro.ogg-9cd72343e2474ad287d666f8e8e21fe7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/texto-fase7.ogg-d538172f9a52559518539c9daa8a2a31.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/ES/Locuciones/texto-fase7.ogg"
+dest_files=[ "res://.import/texto-fase7.ogg-d538172f9a52559518539c9daa8a2a31.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

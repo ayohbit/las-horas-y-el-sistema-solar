@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pluton.ogg-18f099640360efa7bb3071da78c6cbc2.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/ES/Planetas/pluton.ogg"
+dest_files=[ "res://.import/pluton.ogg-18f099640360efa7bb3071da78c6cbc2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

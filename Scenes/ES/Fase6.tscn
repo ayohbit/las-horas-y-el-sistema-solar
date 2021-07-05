@@ -1,0 +1,991 @@
+[gd_scene load_steps=71 format=2]
+
+[ext_resource path="res://Assets/Planetas/Sol/ojo_cerrado.png" type="Texture" id=1]
+[ext_resource path="res://Fases/Fase 1/reloj.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Planetas/Saturno/saturno_cuerpo_03.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Audio/nuevos-sonidos/6.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/ojo_1_cerrado.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Fonts/CoertSchrift_Romaans.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_04.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Planetas/Saturno/saturno_cuerpo_01.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Planetas/Saturno/saturno_cuerpo_04.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Planetas/Saturno/saturno_cuerpo_02.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Fondos/Fondo-fases-general.jpg" type="Texture" id=14]
+[ext_resource path="res://Assets/Audio/ES/Planetas/saturno.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Buttons/menu_button.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_02.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Audio/ES/Locuciones/texto-fase6.ogg" type="AudioStream" id=19]
+[ext_resource path="res://Fases/Fase 6/saturno.gd" type="Script" id=20]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_03.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/ojo_1_abierto.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Planetas/Saturno/saturno_cuerpo_05.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Planetas/Saturno/anillo_front.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Planetas/Saturno/anillo_back.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Option_scene/opciones.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Reloj/Reloj.png" type="Texture" id=27]
+[ext_resource path="res://Fases/Fase 1/texto.gd" type="Script" id=29]
+[ext_resource path="res://Assets/UI/Botones/flecha-derecha.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Reloj/flecha-horas.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Reloj/flecha-segundo.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Reloj/tuerca-roja.png" type="Texture" id=33]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 23 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 23 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 240.0
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 9 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=6]
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.001, 1.1, 2.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1428.24, 1808.28 ), Vector2( 2225.6, 2175.34 ), Vector2( 1007.91, 557.594 ), Vector2( 1875.84, 825.382 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuerpo/ojo_L:frames")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 4 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 1.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuerpo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.8, 1.2, 1.4, 1.5, 1.7 ),
+"transitions": PoolRealArray( 1, 0.554785, 2.14355, 1, 2.14355, 0.63728, 0.554785, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuerpo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1.4, 1.5, 1.7 ),
+"transitions": PoolRealArray( 1, 0.554785, 2.14355, 0.63728, 0.554785, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 20 ), Vector2( 0, -200 ), Vector2( 0, 0 ), Vector2( 0, 20 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("cuerpo/boca:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5, 0.7, 0.8, 0.9, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 3, 1, 0 ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("audio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 15 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0.1, 1.5 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("cuerpo/ojo_L:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.3, 0.4, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 1, 0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("cuerpo/ojo_R:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.3, 0.4, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 1, 0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("anillo:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("anillo:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.9, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2.84631, -25.6161 ), Vector2( 2.846, 100 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuerpo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuerpo:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("anillo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("anillo:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("cuerpo:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("cuerpo/ojo_L:frames")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ SubResource( 4 ), SubResource( 4 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "inicio"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "pulsar"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "reposo"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=15]
+states/inicio/node = SubResource( 9 )
+states/inicio/position = Vector2( 461, 138 )
+states/pulsar/node = SubResource( 10 )
+states/pulsar/position = Vector2( 845, 138 )
+states/reposo/node = SubResource( 11 )
+states/reposo/position = Vector2( 629, 138 )
+transitions = [ "inicio", "reposo", SubResource( 12 ), "reposo", "pulsar", SubResource( 13 ), "pulsar", "reposo", SubResource( 14 ) ]
+start_node = "inicio"
+graph_offset = Vector2( 182.669, 41.4545 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=16]
+
+[sub_resource type="DynamicFont" id=17]
+size = 80
+font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 7.33993, 9.97402 )
+
+[sub_resource type="Animation" id=19]
+length = 7.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("texto:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 0.9, 1.6, 2.7, 4.4, 4.6, 6.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.14, 0.14, 0.24, 0.24, 0.59, 0.59, 1.0 ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("locucion")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.25,
+"stream": ExtResource( 19 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0, 7.1 )
+}
+
+[sub_resource type="Animation" id=20]
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("texto:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texto:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "inicio"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "pulsar"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=25]
+states/inicio/node = SubResource( 21 )
+states/inicio/position = Vector2( 533, 117 )
+states/pulsar/node = SubResource( 22 )
+states/pulsar/position = Vector2( 711, 117 )
+transitions = [ "inicio", "pulsar", SubResource( 23 ), "pulsar", "inicio", SubResource( 24 ) ]
+start_node = "inicio"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=26]
+
+[sub_resource type="Animation" id=27]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("saturno/saturno_control_anim:active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texto/texto_control_anim:active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("saturno:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ Vector2( -256.829, -218.025 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("texto/texto:percent_visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("saturno/cuerpo:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("saturno:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("saturno/anillo:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("reloj/reloj_control_anim:active")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="SpriteFrames" id=28]
+resource_local_to_scene = true
+animations = [ {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="CircleShape2D" id=29]
+radius = 387.34
+
+[sub_resource type="SpriteFrames" id=30]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=31]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 9 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=32]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 0.812252, 1 ),
+"update": 0,
+"values": [ Vector2( -391.672, 2600 ), Vector2( 2550, 245 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("manilla_peque:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 449.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("manilla_peque:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "pulsar"
+length = 2.3
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 360, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("Audio_reloj")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.29139,
+"start_offset": 0.0,
+"stream": ExtResource( 5 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0, 2.2 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("boca:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ojo_R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1.07177, 1 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.8, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 0.4 ), Vector2( 0.5, 0.5 ), Vector2( 0.4, 0.4 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ojo_L:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ojo_L:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, 2 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ojo_R:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, 2 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("manilla_peque:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 449.0, 810.0 ]
+}
+
+[sub_resource type="Animation" id=34]
+length = 30.0
+loop = true
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "inicio"
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "pulsar"
+
+[sub_resource type="AnimationNodeAnimation" id=37]
+animation = "reposo"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=41]
+states/inicio/node = SubResource( 35 )
+states/inicio/position = Vector2( 461, 138.062 )
+states/pulsar/node = SubResource( 36 )
+states/pulsar/position = Vector2( 802, 138.25 )
+states/reposo/node = SubResource( 37 )
+states/reposo/position = Vector2( 629, 137.875 )
+transitions = [ "inicio", "reposo", SubResource( 38 ), "reposo", "pulsar", SubResource( 39 ), "pulsar", "reposo", SubResource( 40 ) ]
+start_node = "inicio"
+graph_offset = Vector2( 367.134, 0 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=42]
+
+[node name="Fase 6" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ -1.59686 ]
+}
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 1388, 720 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="saturno" type="Node2D" parent="."]
+position = Vector2( 1875.84, 825.382 )
+
+[node name="anillo" type="AnimatedSprite" parent="saturno"]
+frames = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="anillo_front" type="Sprite" parent="saturno/anillo"]
+position = Vector2( -21.6855, 141.498 )
+z_index = 3
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="anillo_back" type="Sprite" parent="saturno/anillo"]
+position = Vector2( -9.89868, 51.8891 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="cuerpo" type="AnimatedSprite" parent="saturno"]
+frames = SubResource( 2 )
+frame = 9
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="saturno/cuerpo"]
+rotation = -0.116181
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="colision" type="CollisionShape2D" parent="saturno/cuerpo/Area2D"]
+visible = false
+rotation = -0.174533
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ojo_L" type="AnimatedSprite" parent="saturno/cuerpo"]
+position = Vector2( -50, -60 )
+rotation = -5.96046e-08
+scale = Vector2( 2, 2 )
+frames = SubResource( 4 )
+frame = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ojo_R" type="AnimatedSprite" parent="saturno/cuerpo"]
+position = Vector2( 50, -60 )
+rotation = -5.96046e-08
+scale = Vector2( 2, 2 )
+frames = SubResource( 4 )
+frame = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="boca" type="AnimatedSprite" parent="saturno/cuerpo"]
+position = Vector2( 0, 20 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 5 )
+frame = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="saturno_animaciones" type="AnimationPlayer" parent="saturno"]
+anims/inicio = SubResource( 6 )
+anims/pulsar = SubResource( 7 )
+anims/reposo = SubResource( 8 )
+
+[node name="saturno_control_anim" type="AnimationTree" parent="saturno"]
+tree_root = SubResource( 15 )
+anim_player = NodePath("../saturno_animaciones")
+active = true
+parameters/playback = SubResource( 16 )
+
+[node name="audio" type="AudioStreamPlayer" parent="saturno"]
+stream = ExtResource( 15 )
+
+[node name="texto" type="Node2D" parent="."]
+position = Vector2( 200.56, 191.23 )
+
+[node name="texto" type="Label" parent="texto"]
+margin_left = -88.7268
+margin_top = 255.11
+margin_right = 1296.27
+margin_bottom = 728.11
+rect_pivot_offset = Vector2( 1259.15, -1.7124 )
+custom_fonts/font = SubResource( 17 )
+text = "¿Qué hora es? ¡Las seis! 
+Saturno moviendo sus anillos canta
+bailando el hula hoop
+por toda la galaxia."
+valign = 1
+percent_visible = 0.761873
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="texto/texto"]
+script = ExtResource( 29 )
+
+[node name="colision" type="CollisionShape2D" parent="texto/texto/Area2D"]
+visible = false
+position = Vector2( 636.397, 181.02 )
+scale = Vector2( -89.6592, -19.7111 )
+shape = SubResource( 18 )
+
+[node name="texto_animaciones" type="AnimationPlayer" parent="texto"]
+anims/inicio = SubResource( 19 )
+anims/pulsar = SubResource( 20 )
+
+[node name="texto_control_anim" type="AnimationTree" parent="texto"]
+tree_root = SubResource( 25 )
+anim_player = NodePath("../texto_animaciones")
+parameters/playback = SubResource( 26 )
+
+[node name="locucion" type="AudioStreamPlayer" parent="texto"]
+stream = ExtResource( 19 )
+
+[node name="inicio animaciones" type="AnimationPlayer" parent="."]
+process_priority = 1
+autoplay = "Nueva Animación"
+method_call_mode = 1
+"anims/Nueva Animación" = SubResource( 27 )
+
+[node name="Botones" type="Node2D" parent="."]
+position = Vector2( 2392, 1160 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RightButton" parent="Botones" instance=ExtResource( 17 )]
+margin_top = -1.99695
+margin_right = 316.0
+margin_bottom = 199.003
+icon = ExtResource( 30 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/Fase7.tscn"
+
+[node name="LeftButton" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -2024.0
+margin_top = 200.0
+margin_right = -1708.0
+margin_bottom = 401.0
+rect_rotation = 180.228
+icon = ExtResource( 30 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/Fase5.tscn"
+
+[node name="Button" parent="Botones" instance=ExtResource( 17 )]
+margin_left = -2331.0
+margin_top = -1104.0
+margin_right = -2113.0
+margin_bottom = -903.0
+icon = ExtResource( 26 )
+flat = true
+expand_icon = true
+reference_path = "res://Scenes/ES/OptionsScreen_Fase6.tscn"
+
+[node name="reloj" type="Node2D" parent="."]
+position = Vector2( 2550, 245 )
+rotation = 0.0174533
+scale = Vector2( 0.4, 0.4 )
+
+[node name="cuerpo" type="AnimatedSprite" parent="reloj"]
+position = Vector2( 9.8725, 5.76445 )
+frames = SubResource( 28 )
+playing = true
+
+[node name="Area2D2" type="Area2D" parent="reloj/cuerpo"]
+position = Vector2( 4209.38, -155.755 )
+rotation = 0.116355
+scale = Vector2( 1.216, 1.284 )
+script = ExtResource( 2 )
+
+[node name="colision" type="CollisionShape2D" parent="reloj/cuerpo/Area2D2"]
+visible = false
+position = Vector2( -3424.38, 508.781 )
+rotation = -0.174533
+shape = SubResource( 29 )
+
+[node name="manilla minutos" type="Sprite" parent="reloj"]
+position = Vector2( 3.32796, 2.04462 )
+rotation = 0.00529097
+scale = Vector2( 1.00347, 1.00166 )
+texture = ExtResource( 32 )
+offset = Vector2( -0.338379, -109.706 )
+
+[node name="tuerca" type="Sprite" parent="reloj"]
+position = Vector2( 4.89771, -4.70221 )
+rotation = 3.09665e-08
+scale = Vector2( 2.3, 2.3 )
+z_index = 3
+texture = ExtResource( 33 )
+
+[node name="manilla_peque" type="Sprite" parent="reloj"]
+position = Vector2( 3.81763, -5.45898 )
+rotation = 7.83653
+scale = Vector2( 1.5, 2 )
+z_index = 1
+texture = ExtResource( 31 )
+offset = Vector2( 75.5916, 0.845215 )
+
+[node name="ojo_L" type="AnimatedSprite" parent="reloj"]
+position = Vector2( -121.78, -59.5915 )
+rotation = -5.96046e-08
+scale = Vector2( 2, 2 )
+frames = SubResource( 30 )
+
+[node name="ojo_R" type="AnimatedSprite" parent="reloj"]
+position = Vector2( 132.395, -60 )
+rotation = -0.124994
+scale = Vector2( 2, 2 )
+frames = SubResource( 30 )
+
+[node name="boca" type="AnimatedSprite" parent="reloj"]
+position = Vector2( -0.408203, 108.005 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 31 )
+
+[node name="reloj_animaciones" type="AnimationPlayer" parent="reloj"]
+anims/inicio = SubResource( 32 )
+anims/pulsar = SubResource( 33 )
+anims/reposo = SubResource( 34 )
+
+[node name="reloj_control_anim" type="AnimationTree" parent="reloj"]
+tree_root = SubResource( 41 )
+anim_player = NodePath("../reloj_animaciones")
+active = true
+parameters/playback = SubResource( 42 )
+
+[node name="Audio_reloj" type="AudioStreamPlayer" parent="reloj"]
+stream = ExtResource( 5 )
+
+[connection signal="input_event" from="saturno/cuerpo/Area2D" to="saturno/cuerpo/Area2D" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="texto/texto/Area2D" to="texto/texto/Area2D" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="reloj/cuerpo/Area2D2" to="reloj/cuerpo/Area2D2" method="_on_Area2D_input_event"]

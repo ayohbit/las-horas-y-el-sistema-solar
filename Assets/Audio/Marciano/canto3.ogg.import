@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/canto3.ogg-628410f2b7bbc8e0beed7752b6a3dd3a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Marciano/canto3.ogg"
+dest_files=[ "res://.import/canto3.ogg-628410f2b7bbc8e0beed7752b6a3dd3a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/entrada-marciana-fase5.ogg-f4e73a8699d0ee43da746ad1486a6d61.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/entrada-marciana-fase5.ogg"
+dest_files=[ "res://.import/entrada-marciana-fase5.ogg-f4e73a8699d0ee43da746ad1486a6d61.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

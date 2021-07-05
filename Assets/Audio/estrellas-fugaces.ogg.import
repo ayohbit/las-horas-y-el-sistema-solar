@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/estrellas-fugaces.ogg-ad82697b4be7af3326112e796c4f7c35.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/estrellas-fugaces.ogg"
+dest_files=[ "res://.import/estrellas-fugaces.ogg-ad82697b4be7af3326112e796c4f7c35.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

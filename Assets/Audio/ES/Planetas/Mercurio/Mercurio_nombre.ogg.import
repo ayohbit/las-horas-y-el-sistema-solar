@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mercurio_nombre.ogg-df44e5a1e36dac12febea11a4f4a5849.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/ES/Planetas/Mercurio/Mercurio_nombre.ogg"
+dest_files=[ "res://.import/Mercurio_nombre.ogg-df44e5a1e36dac12febea11a4f4a5849.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

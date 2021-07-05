@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Marciano-click.ogg-46e8607b9fe9f57d0b3c1eebdf210c2e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Marciano/Marciano-click.ogg"
+dest_files=[ "res://.import/Marciano-click.ogg-46e8607b9fe9f57d0b3c1eebdf210c2e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

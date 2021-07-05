@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/niniuu.ogg-c1e8efab5711e80bad681f302348fd6a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/nuevos-sonidos/niniuu.ogg"
+dest_files=[ "res://.import/niniuu.ogg-c1e8efab5711e80bad681f302348fd6a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

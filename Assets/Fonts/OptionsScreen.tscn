@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Buttons/menu_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Fonts/FontMenuButton.tres" type="DynamicFont" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" parent="." instance=ExtResource( 1 )]
+margin_left = 1977.51
+margin_top = 105.869
+margin_right = 2651.51
+margin_bottom = 306.869
+custom_fonts/font = ExtResource( 2 )
+text = "Salir"
+reference_path = "res://Scenes/MainTittleScreen.tscn"

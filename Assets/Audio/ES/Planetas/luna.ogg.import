@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/luna.ogg-38f0607480ac11cf72543070bce740a5.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/ES/Planetas/luna.ogg"
+dest_files=[ "res://.import/luna.ogg-38f0607480ac11cf72543070bce740a5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

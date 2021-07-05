@@ -1,0 +1,345 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/ojo_1_cerrado.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_06.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_05.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Audio/ES/Planetas/Mercurio/Mercurio_entrada.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_01.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_04.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_02.png" type="Texture" id=7]
+[ext_resource path="res://Fases/Fase 1/mercurio.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Audio/ES/Planetas/Mercurio/Mercurio_nombre.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Planetas/Mercurio/cuerpo_02.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Planetas/Mercurio/cuerpo_03.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Planetas/Mercurio/cuerpo_01.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/ojo_1_abierto.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Planetas/Mercurio/cuerpo_04.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Planetas/Bocas_y_ojos/boca_1_03.png" type="Texture" id=15]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 2975.83, 555.396, 161.452, -6.72717, -161.452, 6.72717, 2205.57, 1093.57, 141.271, 0, -141.271, 0, 1653.94, 252.673, 401.631, 2.72717, -401.631, -2.72717, 740.07, 1225.57, 10.7272, 299.906, -10.7272, -299.906, 155.598, 699.294, -344.682, 4.19594, 344.682, -4.19594, 692.324, 170.127, -151.816, -126.998, 151.816, 126.998, 1372.07, 397.572, 0, 0, 0, 0, 1681.89, 1051.67 )
+}
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 150.0
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "inicio"
+
+[sub_resource type="VisualScript" id=7]
+data = {
+"base_type": "AnimationNodeAnimation",
+"functions": [ {
+"data_connections": [  ],
+"function_id": -1,
+"name": "f_312843592",
+"nodes": [  ],
+"scroll": Vector2( 0, 0 ),
+"sequence_connections": [  ]
+} ],
+"is_tool_script": false,
+"signals": [  ],
+"variables": [  ],
+"vs_unify": true
+}
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "pulsar"
+script = SubResource( 7 )
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "reposo"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=13]
+states/inicio/node = SubResource( 6 )
+states/inicio/position = Vector2( 461, 138 )
+states/pulsar/node = SubResource( 8 )
+states/pulsar/position = Vector2( 894, 138 )
+states/reposo/node = SubResource( 9 )
+states/reposo/position = Vector2( 657, 138 )
+transitions = [ "inicio", "reposo", SubResource( 10 ), "reposo", "pulsar", SubResource( 11 ), "pulsar", "reposo", SubResource( 12 ) ]
+start_node = "inicio"
+graph_offset = Vector2( 152, 51 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[sub_resource type="Animation" id=15]
+length = 6.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("..:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0.142883, -0.25, -0.0245765, 0.243859, 0.0239728, 0.295578, -0.278637, -0.0204708, 0.398203, 0.029255, 0.512065, -0.355083, -0.046808, 0.342062, 0.0450915, 0.816317, -0.449447, -0.0555846, 0.399335, 0.0493871, 1, -0.283757, -0.0637376, 0.25, 0.0561551 ),
+"times": PoolRealArray( 0, 0.9, 1.7, 2.9, 4.7, 5.8 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1, 1.3, 1.7, 1.9, 2.4, 2.9, 3.1, 3.4, 3.7, 4.1, 4.3, 5, 5.3, 5.7, 5.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 1, 1 ), Vector2( 0.95, 1.05 ), Vector2( 0.95, 1.05 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.9, 1.1 ), Vector2( 0.9, 1.1 ), Vector2( 1.1, 0.9 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.1, 1.8, 2.4, 3.7, 3.9, 5, 5.3, 5.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 10.0, 0.0, -10.0, 15.0, 0.0, 10.0, 0.0, -10.0, 0.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("cuerpo/boca:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.1, 1.5, 2.4, 2.9, 3.7, 5.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 2, 3, 2, 3, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("cuerpo/ojos/ojo_L:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.1, 1.5, 2.4, 2.9, 3.7, 5.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 0, 1, 0, 1, 0, 1, 0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("cuerpo/ojos/ojo_R:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.1, 1.5, 2.4, 2.9, 3.7, 5.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 0, 1, 0, 1, 0, 1, 0 ]
+}
+tracks/6/type = "audio"
+tracks/6/path = NodePath("audio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": [ {
+"end_offset": 0.744524,
+"start_offset": 0.0,
+"stream": ExtResource( 4 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0, 6.4 )
+}
+
+[sub_resource type="Animation" id=16]
+length = 1.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuerpo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.8, 1.2, 1.4, 1.5, 1.7 ),
+"transitions": PoolRealArray( 1, 0.554785, 2.14355, 1, 2.14355, 0.63728, 0.554785, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuerpo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1.4, 1.5, 1.7 ),
+"transitions": PoolRealArray( 1, 0.554785, 2.14355, 0.63728, 0.554785, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 20 ), Vector2( 0, -200 ), Vector2( 0, 0 ), Vector2( 0, 20 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("audio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 0.83,
+"start_offset": 0.0,
+"stream": ExtResource( 9 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+} ],
+"times": PoolRealArray( 0.5, 1.5 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("cuerpo/boca:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5, 0.7, 0.9, 1, 1.2, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 3, 4, 0 ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuerpo:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 0.68302, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, 0 ) ]
+}
+
+[node name="mercurio recorrido" type="Path2D"]
+curve = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2( 2233.35, 1088.66 )
+offset = 916.633
+rotate = false
+loop = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mercurio" type="Node2D" parent="PathFollow2D"]
+rotation = 0.0362421
+scale = Vector2( 1.04075, 0.959249 )
+
+[node name="cuerpo" type="AnimatedSprite" parent="PathFollow2D/mercurio"]
+position = Vector2( 0, -42.0657 )
+frames = SubResource( 2 )
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D/mercurio/cuerpo"]
+script = ExtResource( 8 )
+
+[node name="colision" type="CollisionShape2D" parent="PathFollow2D/mercurio/cuerpo/Area2D"]
+visible = false
+rotation = -0.174533
+shape = SubResource( 3 )
+
+[node name="boca" type="AnimatedSprite" parent="PathFollow2D/mercurio/cuerpo"]
+position = Vector2( 5.06165, 30.6062 )
+rotation = -1.49012e-08
+frames = SubResource( 4 )
+frame = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ojos" type="Node2D" parent="PathFollow2D/mercurio/cuerpo"]
+position = Vector2( 0, -25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ojo_L" type="AnimatedSprite" parent="PathFollow2D/mercurio/cuerpo/ojos"]
+frames = SubResource( 5 )
+frame = 1
+offset = Vector2( -35, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ojo_R" type="AnimatedSprite" parent="PathFollow2D/mercurio/cuerpo/ojos"]
+frames = SubResource( 5 )
+frame = 1
+offset = Vector2( 35, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="audio" type="AudioStreamPlayer" parent="PathFollow2D/mercurio"]
+stream = ExtResource( 4 )
+
+[node name="mercurio_control_anim" type="AnimationTree" parent="PathFollow2D/mercurio"]
+tree_root = SubResource( 13 )
+anim_player = NodePath("../mercurio_animaciones")
+parameters/playback = SubResource( 14 )
+
+[node name="mercurio_animaciones" type="AnimationPlayer" parent="PathFollow2D/mercurio"]
+playback_process_mode = 0
+anims/inicio = SubResource( 15 )
+anims/pulsar = SubResource( 16 )
+anims/reposo = SubResource( 17 )
+
+[connection signal="input_event" from="PathFollow2D/mercurio/cuerpo/Area2D" to="PathFollow2D/mercurio/cuerpo/Area2D" method="_on_Area2D_input_event"]

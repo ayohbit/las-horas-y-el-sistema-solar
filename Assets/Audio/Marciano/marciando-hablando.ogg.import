@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/marciando-hablando.ogg-857b43e816f5ffe155469ea7d26ff173.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Marciano/marciando-hablando.ogg"
+dest_files=[ "res://.import/marciando-hablando.ogg-857b43e816f5ffe155469ea7d26ff173.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

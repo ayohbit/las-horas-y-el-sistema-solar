@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/yuhiuu-susto.ogg-adcac99f6cf9caf7fb34e9d6a09a4e5c.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/nuevos-sonidos/yuhiuu-susto.ogg"
+dest_files=[ "res://.import/yuhiuu-susto.ogg-adcac99f6cf9caf7fb34e9d6a09a4e5c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

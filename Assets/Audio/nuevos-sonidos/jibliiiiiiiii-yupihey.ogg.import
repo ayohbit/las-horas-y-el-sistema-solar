@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jibliiiiiiiii-yupihey.ogg-961c961dcc1bf5d1e766add90c6783e2.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/nuevos-sonidos/jibliiiiiiiii-yupihey.ogg"
+dest_files=[ "res://.import/jibliiiiiiiii-yupihey.ogg-961c961dcc1bf5d1e766add90c6783e2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

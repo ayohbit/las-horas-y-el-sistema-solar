@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/urano.ogg-a2d23323bf690e74452af0fa4b35e623.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/ES/Planetas/urano.ogg"
+dest_files=[ "res://.import/urano.ogg-a2d23323bf690e74452af0fa4b35e623.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

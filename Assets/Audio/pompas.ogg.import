@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pompas.ogg-595e6f0d1f5efedd35c290133b6ff2d2.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/pompas.ogg"
+dest_files=[ "res://.import/pompas.ogg-595e6f0d1f5efedd35c290133b6ff2d2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/uiiiuuo.ogg-9be8da8dbb5cca06666ec06012e676e1.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/nuevos-sonidos/uiiiuuo.ogg"
+dest_files=[ "res://.import/uiiiuuo.ogg-9be8da8dbb5cca06666ec06012e676e1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
